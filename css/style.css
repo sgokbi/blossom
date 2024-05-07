@@ -38,3 +38,52 @@ body {
   line-height: 1.6;
   color: var(--color-grey-dark-1);
 }
+
+p {
+  color: var(--color-grey-dark);
+  font-size: 1.7rem;
+}
+
+.btn-primary {
+  outline: none;
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+/* ========== Banner ========== */
+.banner {
+  height: 80vh;
+  background-image: url(../images/banner-1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.banner__text {
+  height: 100%;
+  width: 65%;
+  padding: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner__text h1 {
+  font-size: 4rem;
+  color: var(--color-grey-dark-1);
+  font-weight: 600;
+}
+.banner__text p {
+  margin: 1.5rem 0;
+}
