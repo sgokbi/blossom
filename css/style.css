@@ -127,10 +127,148 @@ p {
   margin: 1.5rem 0;
 }
 
+/* ========== Popular Flowers ========== */
+.popular__flowers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+  margin-top: 3rem;
+}
+
+/* 
+.popular__flower-img {
+  width: 100%;
+  height: 100%;
+} */
+
+.popular__flower-card {
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.popular__flower-card:hover {
+  transform: translateY(-10px);
+}
+
+.popular__flower-card--1,
+.popular__flower-card--2,
+.popular__flower-card--3,
+.popular__flower-card--4 {
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  transition: all 0.4s;
+}
+
+.popular__flower-card--1 {
+  background-image: url(../images/valentine-2.jpg);
+}
+
+.popular__flower-card:hover .popular__flower-card--1 {
+  background-image: linear-gradient(
+      rgba(51, 51, 51, 0.7),
+      rgba(51, 51, 51, 0.7)
+    ),
+    url(../images/valentine-2.jpg);
+}
+
+.popular__flower-card--2 {
+  background-image: url(../images/wedding.jpg);
+}
+
+.popular__flower-card:hover .popular__flower-card--2 {
+  background-image: linear-gradient(
+      rgba(51, 51, 51, 0.7),
+      rgba(51, 51, 51, 0.7)
+    ),
+    url(../images/wedding.jpg);
+}
+
+.popular__flower-card--3 {
+  background-image: url(../images/birthday.jpg);
+}
+
+.popular__flower-card:hover .popular__flower-card--3 {
+  background-image: linear-gradient(
+      rgba(51, 51, 51, 0.7),
+      rgba(51, 51, 51, 0.7)
+    ),
+    url(../images/birthday.jpg);
+}
+
+.popular__flower-card--4 {
+  background-image: url(../images/corporate.jpg);
+}
+
+.popular__flower-card:hover .popular__flower-card--4 {
+  background-image: linear-gradient(
+      rgba(51, 51, 51, 0.7),
+      rgba(51, 51, 51, 0.7)
+    ),
+    url(../images/corporate.jpg);
+}
+
+.popular__flower-hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+
+  opacity: 0;
+  visibility: 0;
+  transition: all 0.4s;
+}
+
+.popular__flower-hover h3 {
+  color: var(--color-white);
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.popular__flower-hover h3::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  background-color: var(--color-white);
+  bottom: 0;
+  left: 3.2rem;
+  transition: all 0.3s;
+}
+
+.popular__flower-hover p {
+  color: var(--color-white);
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin: 1rem 0;
+  transition: all 0.3s;
+}
+
+.popular__flower-card:hover .popular__flower-hover {
+  opacity: 1;
+  visibility: 1;
+}
+
+.popular__flower-title {
+  text-align: center;
+  margin: 2rem;
+  font-size: 2rem;
+  color: var(--color-grey-dark-1);
+  font-weight: 300;
+}
+
+/* ========== Featured Flowers ========== */
+
 /* ========== New Flowers ========== */
 .new__flowers {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
   grid-gap: 6rem;
 
   margin-top: 3rem;
@@ -140,13 +278,13 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 40vh;
 
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   border-radius: 5px;
   padding-bottom: 2rem;
   cursor: pointer;
-  height: 50vh;
 }
 
 .new__flower-img {
@@ -189,4 +327,61 @@ p {
   background-color: var(--color-grey-dark-1);
   margin-top: 6rem;
   padding: 5rem;
+
+  display: flex;
+  gap: 3rem;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem;
+  width: 70%;
+  color: var(--color-white);
+}
+
+.links h5 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.links li {
+  list-style: none;
+  line-height: 2;
+}
+
+.links a {
+  color: var(--color-grey-dark);
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: all 0.4s;
+}
+
+.links a:hover {
+  text-decoration: underline;
+  color: var(--color-secondary);
+}
+
+.logo {
+  width: 30%;
+}
+
+.logo h1 {
+  color: var(--color-white);
+  font-size: 3.5rem;
+  margin-top: -2rem;
+}
+
+.social a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 2rem;
+  margin-right: 1rem;
+  transition: all 0.4s;
+}
+
+.social a:hover {
+  color: var(--color-secondary);
 }
