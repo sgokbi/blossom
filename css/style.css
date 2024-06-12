@@ -148,6 +148,16 @@ nav {
   transform: scaleX(1);
 }
 
+.profile {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.profile a {
+  color: var(--color-grey-dark-1);
+  font-size: 1.8rem;
+}
+
 /* ========== Banner ========== */
 .banner {
   height: 80vh;
@@ -159,11 +169,29 @@ nav {
 .banner__text {
   height: 100%;
   width: 65%;
-  padding: 5rem;
+  padding: 18rem 5rem;
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+
+  animation: zoomIn 1.4s ease-in;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  70% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .banner__text h1 span {
