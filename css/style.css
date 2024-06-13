@@ -110,6 +110,14 @@ nav {
   align-items: center;
 }
 
+.menu-btn {
+  display: none;
+}
+
+/* .close-btn {
+  display: none;
+} */
+
 .logo {
   font-family: "Tangerine", cursive;
   font-weight: 700;
@@ -153,9 +161,16 @@ nav {
   gap: 1.5rem;
 }
 
-.profile a {
-  color: var(--color-grey-dark-1);
-  font-size: 1.8rem;
+.profile ion-icon {
+  color: var(--color-primary-hover);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.profile ion-icon:hover {
+  color: var(--color-primary);
+  transform: translateY(-2px);
 }
 
 /* ========== Banner ========== */

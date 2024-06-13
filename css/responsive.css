@@ -1,0 +1,44 @@
+@media (width < 980px) {
+  .menu-btn {
+    display: block;
+    cursor: pointer;
+    font-size: 3rem;
+  }
+
+  /* .close-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 3rem;
+  } */
+
+  .logo {
+    z-index: 100;
+  }
+
+  nav {
+    padding: 0 3rem;
+    background-color: #e6dde2;
+    z-index: 100;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    background-color: #e6dde2;
+    transition: all 1s ease-out;
+  }
+
+  .nav-links li:first-child {
+    padding-top: 5rem;
+  }
+
+  .show-navigation .nav-links {
+    top: 0;
+  }
+}
